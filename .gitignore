@@ -1,0 +1,12 @@
+# Ignorar a pasta node_modules
+node_modules/
+
+# Ignorar arquivos de log
+logs/
+*.log
+
+# Ignorar arquivos gerados pelo compilador TypeScript
+dist/
+*.js
+
+.env
