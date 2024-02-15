@@ -13,9 +13,7 @@ export const tasks = async (req: express.Request, res: express.Response) => {
 
 export const seeTasks = async (req: express.Request, res: express.Response) => {
   const list = await Todo.findAll();
-  res.json({
-    list,
-  });
+  res.json(list);
 };
 
 export const getTask = async (req: express.Request, res: express.Response) => {
@@ -23,9 +21,7 @@ export const getTask = async (req: express.Request, res: express.Response) => {
   const todo = await Todo.findByPk(id);
 
   todo
-    ? res.json({
-        todo,
-      })
+    ? res.json(todo)
     : res.json({
         error: 'tarefa não encontrada',
       });
